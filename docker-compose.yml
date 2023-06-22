@@ -6,7 +6,6 @@ services:
     image: localstack/localstack:2.0.2
     environment:
       - LOCALSTACK_HOST=localstack
-      - DEFAULT_REGION=eu-west-1
       - AWS_ACCESS_KEY_ID=test
       - AWS_SECRET_ACCESS_KEY=test
     volumes:
@@ -20,7 +19,6 @@ services:
     image: localstack/localstack:2.1.0
     environment:
       - LOCALSTACK_HOST=localstack
-      - DEFAULT_REGION=eu-west-1
       - AWS_ACCESS_KEY_ID=test
       - AWS_SECRET_ACCESS_KEY=test
     volumes:
