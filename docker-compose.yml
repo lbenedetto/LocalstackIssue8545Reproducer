@@ -15,8 +15,8 @@ services:
       - "14202:4566"
 
   # https://github.com/localstack/localstack/releases
-  localstack210:
-    image: localstack/localstack:2.1.0
+  localstack232:
+    image: localstack/localstack:2.3.2
     environment:
       - LOCALSTACK_HOST=localstack
       - AWS_ACCESS_KEY_ID=test
@@ -25,4 +25,4 @@ services:
       - ./localstack/formation.yaml:/etc/localstack/init/ready.d/formation.yaml
       - ./localstack/init.sh:/etc/localstack/init/ready.d/init.sh
     ports:
-      - "14210:4566"
+      - "14232:4566"

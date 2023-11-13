@@ -15,12 +15,12 @@ class SendMessageTest {
     }
 
     @Test
-    void testListQueuesWithLocalstack210() {
-        var sqsClient = Main.getSQSClient("210");
+    void testListQueuesWithLocalstack232() {
+        var sqsClient = Main.getSQSClient("232");
         var queues = sqsClient.listQueues().getQueueUrls();
 
         assertEquals(1, queues.size());
-        assertEquals("http://localhost:14210/000000000000/MyMessage", queues.get(0));
+        assertEquals("http://localhost:14232/000000000000/MyMessage", queues.get(0));
     }
 
     @Test
@@ -30,8 +30,8 @@ class SendMessageTest {
     }
 
     @Test
-    void testSendMessageWithLocalstack210() {
-        var sqsClient = Main.getSQSClient("210");
+    void testSendMessageWithLocalstack232() {
+        var sqsClient = Main.getSQSClient("232");
         Main.sendMessage(sqsClient);
     }
 }
