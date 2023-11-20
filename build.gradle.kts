@@ -10,8 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation(group = "com.amazonaws", name = "amazon-sqs-java-messaging-lib", version = "1.2.0")
-    implementation(group = "com.amazonaws", name = "aws-java-sdk-sqs", version = "1.12.493")
+    implementation(group = "software.amazon.awssdk", name = "s3", version = "2.21.26")
 
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")

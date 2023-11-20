@@ -1,28 +1,15 @@
 version: '3.8'
 
 services:
-  # https://github.com/localstack/localstack/releases
-  localstack202:
-    image: localstack/localstack:2.0.2
-    environment:
-      - LOCALSTACK_HOST=localstack
-      - AWS_ACCESS_KEY_ID=test
-      - AWS_SECRET_ACCESS_KEY=test
-    volumes:
-      - ./localstack/formation.yaml:/etc/localstack/init/ready.d/formation.yaml
-      - ./localstack/init.sh:/etc/localstack/init/ready.d/init.sh
-    ports:
-      - "14202:4566"
 
   # https://github.com/localstack/localstack/releases
-  localstack232:
-    image: localstack/localstack:2.3.2
+  localstack300:
+    image: localstack/localstack:3.0.0
     environment:
-      - LOCALSTACK_HOST=localstack
-      - AWS_ACCESS_KEY_ID=test
-      - AWS_SECRET_ACCESS_KEY=test
+      - DEBUG=1
+      - LS_LOG=trace
     volumes:
       - ./localstack/formation.yaml:/etc/localstack/init/ready.d/formation.yaml
       - ./localstack/init.sh:/etc/localstack/init/ready.d/init.sh
     ports:
-      - "14232:4566"
+      - "4566:4566"
